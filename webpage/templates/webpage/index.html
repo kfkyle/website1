@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="{% static 'webpage/style.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <title>Index</title>
 </head>
 <body>
@@ -14,9 +15,10 @@
     <div class="wrapper">
       <div class="logo">
         <img src="" alt="">
+        <button class='button active'><i id="menu" class="fas fa-bars"></i></button>
       </div>
-      <nav>
-        <ul>
+      <nav class = 'navbar'>
+        <ul class = "hidden">
           <li><a href="">About Us</a></li>
           <li><a href="">About Us</a></li>
           <li><a href="">About Us</a></li>
@@ -41,4 +43,5 @@
   </footer>
 
 </body>
+<script src="{% static 'webpage/function.js' %}" charset="utf-8"></script>
 </html>

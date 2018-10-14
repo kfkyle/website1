@@ -12,6 +12,8 @@
 body {
   text-align: center;
   font-size: 16px;
+  padding: 0;
+  margin: 0;
 }
 /* define text node in global with rems */
 h1 {
@@ -65,13 +67,37 @@ button:hover {
 }
 
 
+/* Header */
+header{
+  width: 100%;
+}
+header .wrapper {
+  padding: 0;
+}
+header .logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
 /* Navbar */
 nav ul {
   list-style-type: none;
   padding: 0;
+  border-bottom: .05em solid var(--black);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background: var(--white);
 }
-nav a {
+nav ul.hidden{
+  display: none;
+}
+nav ul li a {
   text-decoration: none;
+}
+nav ul li {
+  padding: 1em;
+  border-top: .05em solid var(--black);
 }
 
 
