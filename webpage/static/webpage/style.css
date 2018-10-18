@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --blue: blue;
+  --blue: #007bff;
   --white: white;
   --black: black;
   --grey: grey;
@@ -18,13 +18,24 @@ body {
 /* define text node in global with rems */
 h1 {
   font-size: 3rem;
+  margin: 1em;
 }
 h2 {
   font-size: 2rem;
+  margin-bottom: .4em;
+}
+hr {
+  width: 4em;
+  background-color: var(--blue);
+  height: .12em;
 }
  .wrapper {
    padding: 1rem 3rem 1rem 3rem;
- }
+}
+button {
+  cursor:pointer;
+}
+
 button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
@@ -96,11 +107,33 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li {
-  padding: 1em;
+  padding: 1em 0;
   border-top: .05em solid var(--black);
 }
 
 
 /* Showcase */
+#showcase .wrapper {
+  background-position: center;
+  background-size: cover;
+  height: 35rem;
+  color: var(--white);
+}
 
 /* Services */
+
+
+/* About Us */
+#why-us img{
+  width: 200px;
+  height: 200px;
+}
+
+/* footer */
+footer nav ul {
+  border: none;
+}
+footer nav ul li{
+  border: none;
+  padding: .5em 0;
+}

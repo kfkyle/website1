@@ -2,58 +2,27 @@
 
 {% block content %}
 <section id="showcase">
-  <div class="wrapper">
+  <div class="wrapper" style='background-image: url("{{home.image.url }}")'>
     <div class="text">
-      <h1>Webpage</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <h1>{{ home.title }}</h1>
+      <p>{{ home.title }}</p>
     </div>
   </div>
 </section>
 
 
 <!-- Services -->
-<section id="services">
-  <div class="wrapper">
 
-    <div class="block">
-      <div class="text">
-        <h2>Services</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam sequi dolore error, voluptas esse blanditiis beatae expedita hic iusto ratione.</p>
-      </div>
-    </div>  
+{% include 'webpage/services.html' %}
 
-    <div class="block">
-      <div class="text">
-        <h2>Service</h2>
-        <button>Learn More</button>
-      </div>
-    </div>
-
-    <div class="block">
-      <div class="text">
-        <h2>Service</h2>
-        <button>Learn More</button>
-      </div>
-    </div>
-
-    <div class="block">
-      <div class="text">
-        <h2>Service</h2>
-        <button>Learn More</button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- About Us -->
-<section id="about-us">
+<!-- Why Us -->
+<section id="why-us">
   <div class="wrapper">
     <div class="text">
-      <h2>About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia labore nostrum a nam vero repellendus eligendi non iusto quaerat aliquam, sed cum, deleniti quam magni laboriosam nemo iste aliquid placeat. Veniam tempora illum sapiente. Sapiente quisquam debitis dolore fugit atque blanditiis laborum pariatur aliquam, architecto repellendus rem quibusdam error ut.</p>
-      <img src="" alt="">
+      <h2>{{ why_us.title }}</h2>
+      <hr>
+      <p>{{ why_us.content }}</p>
+      <img src="{{ why_us.image.url }}" alt="">
     </div>
   </div>
 </section>
@@ -65,20 +34,22 @@
 
     <div class="block">
       <div class="text">
-        <h2>Careers</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque expedita, reprehenderit inventore dignissimos enim aliquid pariatur ex vitae eum deleniti.</p>
+        <h2>{{ careers.title }}</h2>
+        <hr>
+        <p>{{ careers.content }}</p>
         <button>Learn More</button>
       </div>
     </div>
 
     <div class="block">
       <div class="text">
-        <h2>Careers</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque expedita, reprehenderit inventore dignissimos enim aliquid pariatur ex vitae eum deleniti.</p>
+        <h2>{{ about_us.title }}</h2>
+        <hr>
+        <p>{{ about_us.content }}</p>
         <button>Learn More</button>
       </div>
     </div>
-
   </div>
+
 </section>
 {% endblock %}
