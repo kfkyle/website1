@@ -13,7 +13,31 @@
 
 <!-- Services -->
 
-{% include 'webpage/services.html' %}
+<section id="services">
+  <div class="wrapper">
+
+    <div class="block">
+      <div class="text">
+        <h2>{{ services_header.title }}</h2>
+        <hr>
+        <p>{{ services_header.content }}</p>
+      </div>
+    </div>
+
+{% for service in services %}
+    <div class="block">
+      <div class="text">
+        <i class="{{ service.icon }}"></i>
+        <h2>{{ service.title }}</h2>
+        <p>{{ service.content }}</p>
+        <hr>
+        <button>Learn More</button>
+      </div>
+    </div>
+{% endfor %}
+
+  </div>
+</section>
 
 <!-- Why Us -->
 <section id="why-us">
