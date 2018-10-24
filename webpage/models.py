@@ -22,7 +22,7 @@ class Home(models.Model):
     choices = home_choices)
 
     title = models.CharField(max_length=50)
-    content = models.TextField(max_length=500)
+    content = models.TextField(max_length=500, blank=True)
     image = models.ImageField(upload_to='images/', blank=True)
 
     def __str__(self):

@@ -1,5 +1,5 @@
 const nav = document.querySelector('.navbar');
-const menu = document.querySelector('.logo button');
+const menu = document.querySelector('.button');
 const list = document.querySelector('.navbar ul');
 
 menu.addEventListener('click', (e) => {

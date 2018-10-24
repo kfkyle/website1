@@ -15,25 +15,24 @@
 
 <section id="services">
   <div class="wrapper">
-
-    <div class="block">
       <div class="text">
         <h2>{{ services_header.title }}</h2>
         <hr>
-        <p>{{ services_header.content }}</p>
-      </div>
+      <p>{{ services_header.content }}</p>
+
     </div>
 
 {% for service in services %}
+  <div class="wrapper">
     <div class="block">
       <div class="text">
-        <i class="{{ service.icon }}"></i>
-        <h2>{{ service.title }}</h2>
+        <i class="{{ service.icon }} icon"></i>
+        <h3>{{ service.title }}</h2>
         <p>{{ service.content }}</p>
-        <hr>
         <button>Learn More</button>
       </div>
     </div>
+  </div>
 {% endfor %}
 
   </div>

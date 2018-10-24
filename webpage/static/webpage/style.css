@@ -2,8 +2,9 @@
 :root {
   --blue: #007bff;
   --white: white;
-  --black: black;
-  --grey: grey;
+  --black: #444;
+  --grey: #d2d8e0;
+  --dark-grey: #777;
   --light-blue:#c6d7f2;
 }
 
@@ -17,70 +18,68 @@ body {
 }
 /* define text node in global with rems */
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 1em;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: .4em;
+  color: var(--black)
+}
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: .4em;
+  color: var(--black)
+}
+p {
+  color: var(--dark-grey);
 }
 hr {
   width: 4em;
   background-color: var(--blue);
   height: .12em;
 }
- .wrapper {
-   padding: 1rem 3rem 1rem 3rem;
+
+.wrapper {
+   padding: 1rem .8rem 1rem .8rem;
 }
-button {
-  cursor:pointer;
+.block {
+  background-color: var(--white);
+  box-shadow: .2em .2em .8em .01em var(--grey);
+  padding: 2em;
+  /* first is horizontal
+  2nd is vertical
+  3rd is blur - higher the number the softer the blru
+  4th is spead*/
+}
+
+.icon {
+  color: var(--blue);
+  font-size: 2.5em;
 }
 
 button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
-	background:-moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
-	background-color:#bddbfa;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 13px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
+  color: var(--white);
+  background: var(--blue);
+  border: none;
+  padding: .5em 2em;
+  border-radius: 2em;
+  cursor: pointer;
+  box-shadow: .2em .2em .8em .01em var(--grey);
 }
 button:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
-	background:-moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:-webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:-o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:-ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
-	background-color:#80b5ea;
-}
- button:active {
-	position:relative;
-	top:1px;
-}
+  color: var(--blue);
+  background:var(--white);
+  border: .04em solid var(--blue);
+  margin: -.05em;
+  box-shadow: .3em .3em .4em .1em var(--grey);
 
+}
 
 /* Header */
 header{
   width: 100%;
+  position: absolute;
 }
 header .wrapper {
   padding: 0;
@@ -89,6 +88,9 @@ header .logo {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+}
+header .logo i {
+  color: white;
 }
 /* Navbar */
 nav ul {
@@ -118,6 +120,7 @@ nav ul li {
   background-size: cover;
   height: 35rem;
   color: var(--white);
+
 }
 
 /* Services */
